@@ -2,7 +2,7 @@
     <div class="col-lg-12 main-col">
         <div class="top">
             <h1>List of projects:</h1>
-            <button type="button" class="btn btn-primary add">Add project</button>
+            <%= link("Add project", to: "/add", method: "get", class: "btn btn-primary add") %>
         </div>
         <table class="table table-bordered">
             <tr>
@@ -19,7 +19,7 @@
                         <%= p.description %>
                     </td>
                     <td>
-                        <button type="button" class="btn btn-primary">Install</button>
+                        <%= link("Start", to: "/start/#{p.hash}", method: "get", class: "btn btn-primary") %>
                         <button type="button" class="btn btn-danger">Delete</button>
                     </td>
                 </tr>

@@ -17,6 +17,9 @@ defmodule EnvshareWeb.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
+    get "/add", PageController, :add
+    get "/start/:hash", PageController, :start
+    post "/create", PageController, :create
   end
 
   # Other scopes may use custom stacks.

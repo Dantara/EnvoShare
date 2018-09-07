@@ -37,6 +37,13 @@ defmodule Blockchain do
     chain
   end
 
+  def find_by_hash(hash) do
+    get
+    |> Enum.find(fn b ->
+      b.hash == hash
+    end)
+  end
+
   @doc "Validate the complete blockchain"
   def valid?(blockchain) when is_list(blockchain) do
     zero = Enum.reduce_while(blockchain, nil, fn prev, current ->
