@@ -3,7 +3,9 @@ defmodule Block do
 
   def new(data, prev_hash) do
     %Block{
-      data: data,
+      name: data.name,
+      description: data.description,
+      commands: data.commands,
       prev_hash: prev_hash,
       timestamp: NaiveDateTime.utc_now,
     }
@@ -12,7 +14,7 @@ defmodule Block do
   def zero do
     %Block{
       name: "GENESIS",
-      description: "GENESIS BLOCK"
+      description: "GENESIS BLOCK",
       commands: [],
       prev_hash: "GENESIS",
       timestamp: NaiveDateTime.utc_now,

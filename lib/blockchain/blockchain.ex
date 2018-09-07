@@ -30,6 +30,13 @@ defmodule Blockchain do
     [ block | blockchain ]
   end
 
+  def insert(data) do
+    chain = get |> insert(data)
+    :ets.insert(:chain, {"chain", chain})
+
+    chain
+  end
+
   @doc "Validate the complete blockchain"
   def valid?(blockchain) when is_list(blockchain) do
     zero = Enum.reduce_while(blockchain, nil, fn prev, current ->

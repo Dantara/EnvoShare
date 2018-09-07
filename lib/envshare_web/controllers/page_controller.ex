@@ -2,6 +2,7 @@ defmodule EnvshareWeb.PageController do
   use EnvshareWeb, :controller
 
   def index(conn, _params) do
-    render conn, "index.html"
+    projects = ProjectWrapper.get_projects
+    render conn, "index.html", projects: projects
   end
 end
