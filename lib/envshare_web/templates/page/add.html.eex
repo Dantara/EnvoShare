@@ -15,9 +15,15 @@
                 </div>
             </div>
             <div class="form-group">
-                <label class="control-label col-sm-2">Commands</label>
+                <label class="control-label col-sm-2">Docker file</label>
                 <div class="col-sm-8">
                     <%= textarea :project, :commands, [class: "form-control commands"] %>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2">Run command</label>
+                <div class="col-sm-8">
+                    <%= text_input f, :run, [class: "form-control"] %>
                 </div>
             </div>
             <%= submit "Create", [class: "btn btn-default"] %>

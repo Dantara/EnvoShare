@@ -1,5 +1,5 @@
 defmodule Crypto do
-  @hash_fields [:name, :description, :commands, :timestamp, :prev_hash]
+  @hash_fields [:name, :description, :commands, :run, :timestamp, :prev_hash]
 
   @doc "Calculate hash of block"
   def hash(%{} = block) do

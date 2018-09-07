@@ -5,4 +5,18 @@ defmodule Docker do
 
     :ok
   end
+
+  def run(command) do
+    head =
+      command
+      |> String.split(" ")
+      |> hd
+
+      tail =
+        command
+        |> String.split(" ")
+        |> tl
+
+    System.cmd(head, tail)
+  end
 end

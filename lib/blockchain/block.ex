@@ -1,11 +1,12 @@
 defmodule Block do
-  defstruct [:name, :description, :commands, :timestamp, :prev_hash, :hash]
+  defstruct [:name, :run, :description, :commands, :timestamp, :prev_hash, :hash]
 
   def new(data, prev_hash) do
     %Block{
       name: data.name,
       description: data.description,
       commands: data.commands,
+      run: data.run,
       prev_hash: prev_hash,
       timestamp: NaiveDateTime.utc_now,
     }
@@ -16,6 +17,7 @@ defmodule Block do
       name: "GENESIS",
       description: "GENESIS BLOCK",
       commands: [],
+      run: "echo 'genesis'",
       prev_hash: "GENESIS",
       timestamp: NaiveDateTime.utc_now,
     }
