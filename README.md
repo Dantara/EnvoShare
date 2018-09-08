@@ -1,4 +1,4 @@
 # Envshare
 
-FlatStack hackthon project
+FlatStack hackathon project
 
