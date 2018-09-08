@@ -15,7 +15,7 @@
                 </div>
             </div>
             <div class="form-group">
-                <label class="control-label col-sm-2">Docker file</label>
+                <label class="control-label col-sm-2">Dockerfile</label>
                 <div class="col-sm-8">
                     <%= textarea :project, :commands, [class: "form-control commands"] %>
                 </div>
